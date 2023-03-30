@@ -1,0 +1,36 @@
+ANNIE
+
+
+
+JOHN
+
+DATA OVERVIEW
+
+We used home price data from Zillow from 1996-2018. Our dataset contained about 15,000 zipcodes. One of the limitations is our data is that. Home prices mostly rise over time, but our data set happens to include one of the greatest housing busts in a generation, meaning a model that is trained on all the data will tend to underestimate home price rises in an economic expansion. To work around this, we only used data from 2013 onward, but using a smaller window of data is also not ideal.
+
+First, we gathered top 10 zipcodes by the highest 5-year % return from 2013-2018. Then filtered that group down to the top 5 by selecting zipcodes with lowest down deviation from 1996-2018, or lowest downside risk. We defined downside for these zipcodes as their 5-year % return underperforming the national average 5-year % return for any given month. Denver did not have data before 2013, but we included it anyway because it had the highest ROI. Remarkably, New York City did not underperform the national baseline for a single month over that period.
+
+These are the top five cities by highest 5-year % return and lowest down deviation.
+
+MODELING AND PERFORMANCE
+
+We ran an ARIMA model with differencing of order 2 to make the data stationary. We ran five models, one for each of the top zipcodes. Here we are showing a model for St. Petersburg. Our test predictions were off by only $2750 on average for the 2017-18 period, partially a function of the size of the test set.
+
+Next we used our model to make a home price prediction for the next five years. Our model is relatively simple, as we essentially forecast out a continuation of the past five years. Our model has a built in assumption that there will not be a housing recession in the next five years. We also did not factor in any global pandemics into our model, if such a thing were to happen.
+
+PAUL
+
+FINDINGS AND RECOMMENDATIONS
+
+After the top 5 zip codes were selected for modeling and predictions made based of those models, we were able to calculate return on investment at various intervals. Although the main focus of our analysis was to find the best five year return, we have included one and three year returns as well. From the chart you can see that St. Petersburg has the highest predicted returns for each time interval, most notably a 65% five year return. Nashville and Denver were strong performers as well.
+
+With the highest returns across all three time intervals, our first recommendation is to explore acquiring property in St. Petersburg, FL. We also found Nashville, Denver, and Pittsburgh produce strong returns. Lastly, although New York City has a much higher initial investment than the others, we still expect property there to be a profitable investment. With a variety of geographic features including the beaches of Florida, mountains of Colorado, and more dense urban areas, your investment may also depend on personal preference and lifestyle.
+
+FUTURE INSIGHTS
+
+Future models could be made more comprehensive by including extra variables like mortgage rates and analyzing any cyclical trends like recession indicators. In addition, we could investigate seasonality to determine if a certain time of year was the best time to buy or sell.
+
+Once again, I'm Paul Schulken and am joined by John Nahra and Annie Zheng.
+
+We appreciate your time and will open it up to questions.
+
