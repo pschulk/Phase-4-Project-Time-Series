@@ -18,10 +18,10 @@ The following are the top 5 zip codes we believe would be the best to invest in:
 
 | Rank | Zipcode | City, State |
 | ---- | ------- | ----------- |
-|   1  |  80216  | Denver, Colorado |
-|   2  |  94601  | Oakland, California |
-|   3  |  33705  | St. Petersburg, Florida |
-|   4  |  37210  | Nashville, Tennessee |
+|   1  |  37207  | Nashville, Tennessee |
+|   2  |  33705  | St. Petersburg, Florida |
+|   3  |  94601  | Oakland, California |
+|   4  |  80216  | Denver, Colorado |
 |   5  |  15201  | Pittsburgh, Pennsylvania |
 
 
@@ -34,7 +34,11 @@ Our goal is to identify and recommend the top 5 zip codes would be the best to i
 ### Exploratory Data Analysis & Data Cleaning
 Taking an initial look into the dataset, there appeared to be some 4-digit zip codes. From some further research, those with only 4 digits were zip codes that begun with 0. Zillow only contains data within the United States which has a strict 5-digit long zip code. The 4-digit long zip codes were addressed by adding back the 0 to the beginning. 
 
-We feature engineered additional columns such as the 5-, 10-, and 15-Year Percent Returns columns to assist us in our search for the top 5 zip codes to invest in. By gathering the top 10 zip codes by highest 5-year percent return from 2013-2018, we filtered many zip codes out. Those top 10 zip codes were soon filtered down to 5 by selecting those with the lowest down devation from 1996-2018. To quantify downside risk, we used the down deviation measure, which is essentially a standard deviation calculation that focuses only on downside volatility. We defined downside for these zipcodes as their 5-year % return underperforming the national average for any given month. This left us with 5 zipcodes spanning across California, Tennessee, Florida, Pennsylvania, and Colorado. In order to model our dataset, we took steps towards making the data stationary through differencing. 
+We feature engineered additional columns such as the 5-, 10-, and 15-year percent returns columns to assist us in our search for the top 5 zip codes to invest in. By gathering the top 10 zip codes by highest 5-year percent return from 2013-2018, we filtered many zip codes out. Those top 10 zip codes were soon filtered down to 5 by selecting those with the lowest down devation from 1996-2018. To quantify downside risk, we used the down deviation measure, which is essentially a standard deviation calculation that focuses only on downside volatility. We defined downside for these zipcodes as their 5-year % return underperforming the national average for any given month. This left us with 5 zipcodes spanning across California, Tennessee, Florida, Pennsylvania, and Colorado. In order to model our dataset, we took steps towards making the data stationary through differencing.
+
+
+*add graph about top 5 zip codes home pricess*
+
 
 The chart below focuses on zip code 37210 in Nashville, TN. Any month where Nashville’s 5-year % return was below that for the national average was included in the down deviation calculation.
 
@@ -46,13 +50,10 @@ The following are the top five cities by highest 5-year % return and lowest down
 | Zip Code | City, State | 5-Year ROI | Down Deviation |
 | -------- | ----------- | ----------- |
 |  80216  | Denver, Colorado |  174%  |  N/A  |
-|  94601  | Oakland, California |  168%  |  21%
-|  33705  | St. Petersburg, Florida |  159%  |  20%
-|  37210  | Nashville, Tennessee |  156%  |  16%
-|  15201  | Pittsburgh, Pennsylvania |  148%  |  10%
-
-
-*add graph about top 5 zip codes home pricess*
+|  94601  | Oakland, California |  168%  |  21%  |
+|  33705  | St. Petersburg, Florida |  159%  |  20%  |
+|  37210  | Nashville, Tennessee |  156%  |  16%  |
+|  15201  | Pittsburgh, Pennsylvania |  148%  |  10%  |
 
 
 ## Modeling & Evaluation
@@ -67,10 +68,10 @@ The top 5 best zip codes to invest in have been identified and ranked in order o
 
 | Rank | Zipcode | City, State |
 | ---- | ------- | ----------- |
-|   1  |  80216  | Denver, Colorado |
-|   2  |  94601  | Oakland, California |
-|   3  |  33705  | St. Petersburg, Florida |
-|   4  |  37210  | Nashville, Tennessee |
+|   1  |  37207  | Nashville, Tennessee |
+|   2  |  33705  | St. Petersburg, Florida |
+|   3  |  94601  | Oakland, California |
+|   4  |  80216  | Denver, Colorado |
 |   5  |  15201  | Pittsburgh, Pennsylvania |
 
 
