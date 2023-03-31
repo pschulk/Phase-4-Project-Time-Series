@@ -34,14 +34,32 @@ Our goal is to identify and recommend the top 5 zip codes would be the best to i
 ### Exploratory Data Analysis & Data Cleaning
 Taking an initial look into the dataset, there appeared to be some 4-digit zip codes. From some further research, those with only 4 digits were zip codes that begun with 0. Zillow only contains data within the United States which has a strict 5-digit long zip code. The 4-digit long zip codes were addressed by adding back the 0 to the beginning. 
 
-We feature engineered additional columns such as the 5-, 10-, and 15-Year Percent Returns columns to assist us in our search for the top 5 zip codes to invest in. By gathering the top 10 zip codes by highest 5-year percent return from 2013-2018, we filtered many zip codes out. Those top 10 zip codes were soon filtered down to 5 by selecting those with the lowest down devation from 1996-2018. 
+We feature engineered additional columns such as the 5-, 10-, and 15-Year Percent Returns columns to assist us in our search for the top 5 zip codes to invest in. By gathering the top 10 zip codes by highest 5-year percent return from 2013-2018, we filtered many zip codes out. Those top 10 zip codes were soon filtered down to 5 by selecting those with the lowest down devation from 1996-2018. To quantify downside risk, we used the down deviation measure, which is essentially a standard deviation calculation that focuses only on downside volatility. We defined downside for these zipcodes as their 5-year % return underperforming the national average for any given month. This left us with 5 zipcodes spanning across California, Tennessee, Florida, Pennsylvania, and Colorado. In order to model our dataset, we took steps towards making the data stationary through differencing. 
 
-This left us with 5 zipcodes spanning across California, Tennessee, Florida, Pennsylvania, and Colorado. In order to model our dataset, we took steps towards making the data stationary through differencing. 
+The chart below focuses on zip code 37210 in Nashville, TN. Any month where Nashville’s 5-year % return was below that for the national average was included in the down deviation calculation.
+
+<img src=images/Nashville_5YrReturn.png>
+
+
+The following are the top five cities by highest 5-year % return and lowest down deviation that we modeled. Denver didn’t have data before 2013 so we couldn’t calculate its down deviation, but we included it anyway because it had the highest 5-year return. We also excluded a New York City zipcode that would have qualified. We just had a sinking feeling that its expensive home prices could take a hit if a global pandemic were to occur and lead to the rise of remote work.
+
+| Zip Code | City, State | 5-Year ROI | Down Deviation |
+| -------- | ----------- | ----------- |
+|  80216  | Denver, Colorado |  174%  |  N/A  |
+|  94601  | Oakland, California |  168%  |  21%
+|  33705  | St. Petersburg, Florida |  159%  |  20%
+|  37210  | Nashville, Tennessee |  156%  |  16%
+|  15201  | Pittsburgh, Pennsylvania |  148%  |  10%
+
+
+*add graph about top 5 zip codes home pricess*
 
 
 ## Modeling & Evaluation
 
 *add modeling info and graphs*
+
+
 
 
 ## Conclusion & Recommendations
