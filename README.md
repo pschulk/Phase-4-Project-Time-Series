@@ -58,12 +58,12 @@ To begin the modeling process, we split our data into train and test sets. Since
 
 The following graph is our model for Nashville. Our test predictions were off by about $15,000 dollars on average.
 
-# **insert nashville graph for train/test split**
+<img width="650" src=images/nashville_train_test.png>
 
 
 Following the train/test split, we used our model to make a home price prediction for the next five years to determine which of the top five zipcodes represents the best investment. Here we are again showing a Nashville chart, which includes its actual home prices along with our 5 year forecast. Nashville had the highest predicted 5 year return of our top zipcodes. The model has an implicit assumption that there will not be a housing recession in the next five years.
 
-# **insert nashville graph for forecasted predictions**
+<img width="650" src=images/nashville_home_price.png>
 
 
 After the top 5 zip codes were selected for modeling and predictions made based off of those models, the return on investments at various intervals were calculated. The analysis included 1-, 3-, and 5-year returns, as shown in the following graph. It is clear that Nashville has the highest predicted returns for each time interval, most notably a 144% five year return! St. Petersburg and Oakland were strong performers as well.
