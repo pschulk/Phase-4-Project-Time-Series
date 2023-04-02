@@ -86,3 +86,19 @@ The top 5 best zip codes to invest in have been identified and ranked in order o
 
 ## Future Insights & Next Steps
 Future models could be made more comprehensive by including extra variables like mortgage rates and analyzing any cyclical trends like recession indicators. In addition, we could investigate seasonality to determine if a certain time of year was the best time to buy or sell.
+
+## For More Information
+
+Please review our full analysis in [our Jupyter Notebook](./final_notebook.ipynb) or our [presentation](./Presentation.pdf).
+
+## Repository Structure
+
+```
+├── exploratory_files                   <- Jupyter notebooks for data exploration and testing
+├── images                              <- Both sourced externally and generated from code
+├── data                                <- Data files used in analysis
+├── .gitignore                          <- Code to avoid uploading specified files
+├── Phase_4_Final_Notebook.ipynb        <- Narrative documentation of analysis in Jupyter notebook
+├── README.md                           <- The top-level README for reviewers of this project
+├── Presentation.pdf                    <- PDF version of project presentation
+```
