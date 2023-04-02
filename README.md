@@ -1,6 +1,6 @@
 # Time Series Analysis for Top 5 Best Zip Codes for Realty Investments
 
-<img width="1280" height="640" src=images/ZipCodeHeader.png>
+<img width="1337" src=images/ZipCodeHeader.png>
 
 ## Authors
 [Paul Schulken](https://github.com/pschulk/), [John Nahra](https://github.com/jnahra/), & [Annie Zheng](https://github.com/anniezhengaz/)
@@ -36,11 +36,11 @@ Taking an initial look into the dataset, there appeared to be some 4-digit zip c
 
 We feature engineered additional columns such as the 5-year percent returns column to assist us in our search for the top 5 zip codes to invest in. By gathering the top 10 zip codes by highest 5-year percent return from 2013-2018, we filtered many zip codes out. Those top 10 zip codes were soon filtered down to 5 by selecting those with the lowest down devation from 1996-2018. This left us with 5 zipcodes spanning across California, Tennessee, Florida, Pennsylvania, and Colorado as seen below. Home prices have generally rise over time, but the 2008 financial crisis did create a major reversal of home prices for a time. Yet all these top performers resumed their uptrend and hit new highs as of 2018.
 
-<img src=images/top5_zipcodes_over_time.png>
+<img width="500" src=images/top5_zipcodes_over_time.png>
 
 The chart below focuses on zip code 37210 in Nashville, TN specifically. Any month where Nashville’s 5-year % return was below that for the national average was included in the down deviation calculation. For Nashville, one of our top zipcodes, this was about 150% (as you can see by the last data point of the blue line). To quantify downside risk, we used the down deviation measure, which is essentially a standard deviation calculation that focuses only on downside volatility. We defined downside for these zipcodes as their 5-year % return underperforming the national average for any given month. So on the chart, any month where Nashville’s 5-year % return was below that for the national average was included in the down deviation calculation.
 
-<img src=images/Nashville_5YrReturn.png>
+<img width="500" src=images/Nashville_5YrReturn.png>
 
 The following are the top five cities by highest 5-year % return and lowest down deviation that we modeled. Denver didn’t have data before 2013 so we couldn’t calculate its down deviation, but we included it anyway because it had the highest 5-year return. We also excluded a New York City zipcode that would have qualified. We just had a sinking feeling that its expensive home prices could take a hit if a global pandemic were to occur and lead to the rise of remote work.
 
@@ -58,17 +58,17 @@ To begin the modeling process, we split our data into train and test sets. Since
 
 The following graph is our model for Nashville. Our test predictions were off by about $15,000 dollars on average.
 
-**insert nashville graph for train/test split**
+# **insert nashville graph for train/test split**
 
 
 Following the train/test split, we used our model to make a home price prediction for the next five years to determine which of the top five zipcodes represents the best investment. Here we are again showing a Nashville chart, which includes its actual home prices along with our 5 year forecast. Nashville had the highest predicted 5 year return of our top zipcodes. The model has an implicit assumption that there will not be a housing recession in the next five years.
 
-**insert nashville graph for forecasted predictions**
+# **insert nashville graph for forecasted predictions**
 
 
 After the top 5 zip codes were selected for modeling and predictions made based off of those models, the return on investments at various intervals were calculated. The analysis included 1-, 3-, and 5-year returns, as shown in the following graph. It is clear that Nashville has the highest predicted returns for each time interval, most notably a 144% five year return! St. Petersburg and Oakland were strong performers as well.
 
-<img src=images/top5_zipcodes_roi.png>
+<img  width="500" src=images/top5_zipcodes_roi.png>
 
 
 ## Conclusion & Recommendations
