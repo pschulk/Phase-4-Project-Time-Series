@@ -89,7 +89,7 @@ Future models could be made more comprehensive by including extra variables like
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./final_notebook.ipynb) or our [presentation](./Presentation.pdf).
+Please review our full analysis in [our Jupyter Notebook](./Phase_4_Final_Notebook.ipynb) or our [presentation](./Presentation.pdf).
 
 ## Repository Structure
 
