@@ -94,9 +94,9 @@ Please review our full analysis in [our Jupyter Notebook](./Phase_4_Final_Notebo
 ## Repository Structure
 
 ```
-├── exploratory_files                   <- Jupyter notebooks for data exploration and testing
-├── images                              <- Both sourced externally and generated from code
-├── data                                <- Data files used in analysis
+├── data                                <- Jupyter notebooks for data exploration and testing
+├── exploratory_files                   <- Both sourced externally and generated from code
+├── images                              <- Data files used in analysis
 ├── .gitignore                          <- Code to avoid uploading specified files
 ├── Phase_4_Final_Notebook.ipynb        <- Narrative documentation of analysis in Jupyter notebook
 ├── README.md                           <- The top-level README for reviewers of this project
